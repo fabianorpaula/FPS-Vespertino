@@ -12,6 +12,7 @@ public class Mover : MonoBehaviour
 
     public GameObject ArmaDeFogo;
 
+    
 
 
     void Start()
