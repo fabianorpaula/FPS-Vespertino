@@ -734,7 +734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensibilidade: 1000
   speed: 4
-  ArmaDeFogo: {fileID: 2067429286}
+  ArmaDeFogo: {fileID: 1633629679}
 --- !u!136 &526419192
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2279,6 +2279,8 @@ MonoBehaviour:
   qtdTiros: 30
   maxTiros: 30
   SomDeTiro: {fileID: 1633629685}
+  ArmaCheia: {fileID: 8300000, guid: 39cde3ad199d6124fb58e2b6d2bd6f73, type: 3}
+  ArmaVazia: {fileID: 8300000, guid: 9ee3e5736e2e99a4084a053b70becc83, type: 3}
 --- !u!82 &1633629685
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2290,7 +2292,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 39cde3ad199d6124fb58e2b6d2bd6f73, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2954,6 +2956,8 @@ MonoBehaviour:
   qtdTiros: 30
   maxTiros: 30
   SomDeTiro: {fileID: 0}
+  ArmaCheia: {fileID: 0}
+  ArmaVazia: {fileID: 0}
 --- !u!1001 &2072242853
 PrefabInstance:
   m_ObjectHideFlags: 0

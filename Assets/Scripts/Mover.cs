@@ -73,4 +73,13 @@ public class Mover : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter(Collider colidiu)
+    {
+        if(colidiu.gameObject.tag == "Municao")
+        {
+            ArmaDeFogo.GetComponent<Arma>().Recarregar();
+            Destroy(colidiu.gameObject);
+        }
+    }
+
 }

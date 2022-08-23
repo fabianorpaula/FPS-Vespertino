@@ -47,5 +47,20 @@ public class Arma : MonoBehaviour
         }
     }
 
+
+    public void Recarregar()
+    {
+        //recarega tudo
+        qtdTiros = maxTiros;
+
+        //com limitação
+        /*
+        qtdTiros = qtdTiros + 6;
+        
+        if(qtdTiros > maxTiros)
+        {
+            qtdTiros = maxTiros;
+        }*/
+    }
 }
 
