@@ -6,6 +6,10 @@ public class Arma : MonoBehaviour
 {
     public int qtdTiros = 30;
     public int maxTiros= 30;
+    //Pegar o Arquivo de Som
+    public AudioSource SomDeTiro;
+    public AudioClip ArmaCheia;
+    public AudioClip ArmaVazia;
 
     public bool DanoTiro()
     {
@@ -13,6 +17,9 @@ public class Arma : MonoBehaviour
         {
 
             qtdTiros--;
+            //Toda Vez que Atira / Faz o Som de Tiro
+            SomDeTiro.clip = ArmaCheia;
+            SomDeTiro.Play();
             RaycastHit Bateu;
             // Does the ray intersect any objects excluding the player layer
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out Bateu, 5f))
@@ -34,6 +41,8 @@ public class Arma : MonoBehaviour
         else
         {
             Debug.Log("Nao Tenho Bala");
+            SomDeTiro.clip = ArmaVazia;
+            SomDeTiro.Play();
             return false;
         }
     }
