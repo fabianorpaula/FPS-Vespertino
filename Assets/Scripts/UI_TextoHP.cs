@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class UI_TextoHP : MonoBehaviour
 {
-    public int HP;
+    public Mover MeuPersonagem;
     private Text meuTexto;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class UI_TextoHP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        string info = "HP: " + HP.ToString();
+        string info = "HP: " + MeuPersonagem.HP.ToString();
         meuTexto.text = info;
     }
 }

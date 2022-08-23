@@ -9,6 +9,7 @@ public class Mover : MonoBehaviour
     private AudioSource MeusPassos;//para ouvir passos
     public float sensibilidade = 1000f;
     public float speed = 4;
+    public float HP;
 
     public GameObject ArmaDeFogo;
 
@@ -80,6 +81,18 @@ public class Mover : MonoBehaviour
             ArmaDeFogo.GetComponent<Arma>().Recarregar();
             Destroy(colidiu.gameObject);
         }
+        if (colidiu.gameObject.tag == "Vida")
+        {
+            HP = 100;
+            Destroy(colidiu.gameObject);
+        }
     }
 
+    private void OnCollisionStay(Collision colisao)
+    {
+        if (colisao.gameObject.tag == "Inimigo")
+        {
+            HP--;
+        }
+    }
 }

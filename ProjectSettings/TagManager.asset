@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Inimigo
+  - Municao
+  - Vida
   layers:
   - Default
   - TransparentFX
